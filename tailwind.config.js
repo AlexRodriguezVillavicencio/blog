@@ -15,7 +15,11 @@ module.exports = {
       'lg': '992px',
       'xl': '1200px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Source Sans Pro'],
+    },
+    },
   },
   plugins: [],
 }
