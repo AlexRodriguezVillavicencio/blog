@@ -1,11 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700");
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* html, body, heading */
 @layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   body {
-    /* font-family: Lobster; */
-    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", "Arial";
+    @apply bg-[#141414] text-white;
+  }
+  nav {
+    @apply top-0 z-50 flex items-center w-full justify-around
+    h-[60px];
   }
 }
 
@@ -13,9 +24,9 @@
   .listFeatured {
     counter-reset: my-awesome-counter;
     list-style: none;
-    padding-left: 0; 
+    padding-left: 0;
   }
- .listFeatured li {
+  .listFeatured li {
     counter-increment: my-awesome-counter;
     display: flex;
     font-size: 0.8rem;
@@ -25,7 +36,43 @@
     font-weight: bold;
     font-size: 3rem;
     margin-right: 0.5rem;
-    font-family: 'Abril Fatface', serif;
-    line-height: 1; 
+    font-family: "Abril Fatface", serif;
+    line-height: 1;
+  }
+  .navbarUp {
+    animation-name: navbarAnimationUp;
+    animation-duration: .2s;
+  }
+  @keyframes navbarAnimationUp {
+    0% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .navbarDown {
+    animation-name: navbarAnimationDown;
+    animation-duration: .2s;
+  }
+  @keyframes navbarAnimationDown {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-60px);
+    }
+  }
+  input{
+    color:black
+  }
+  input:focus + .flashingLine {
+    animation: flashing 1s infinite;
+  }
+  
+  @keyframes flashing {
+    50% {
+      border-color: transparent;
+    }
   }
 }

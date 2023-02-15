@@ -1,12 +1,12 @@
-import Header from "@/pages/components/Header"
-import Popular from "@/pages/components/Popular"
-import Stories from "@/pages/components/Stories"
+import Navbar from "@/pages/components/Navbar";
+import Popular from "@/pages/components/Popular";
+import Stories from "@/pages/components/Stories";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]
+      <Navbar />
+      <main className="mt-[60px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]
                 m-auto  flex">
         <section className="w-8/12 pl-[15px] pr-[15px]">
           <h5 className="text-xl pb-5 "><span>All Stories</span></h5>
@@ -21,7 +21,6 @@ export default function Home() {
             <Popular/>
             <Popular/>
           </ol>
-
         </section>
       </main>
     </>
