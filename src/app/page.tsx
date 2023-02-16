@@ -14,7 +14,7 @@ export default function Home() {
           <Stories/>
           <Stories/>
         </section>
-        <section className="w-4/12 pl-6 ">
+        <section className="w-4/12 pl-6 border-l-[1px] border-indigo-400">
           <h5 className="text-xl pb-5 "><span>Popular</span></h5>
           <ol className="listFeatured">
             <Popular/>
